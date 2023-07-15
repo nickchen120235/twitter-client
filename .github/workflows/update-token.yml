@@ -1,0 +1,20 @@
+name: Update Cronitor Monitor Guest Token
+
+on:
+  schedule:
+    - cron: '0,30 * * * *'
+
+jobs:
+  update_token:
+    runs-on: 'ubuntu-latest'
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+      - run: npm run update-token
+        env:
+          CRONITOR_API_KEY: ${{ secrets.CRONITOR_API_KEY }}

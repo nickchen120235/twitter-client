@@ -1,5 +1,5 @@
 // These are pre-fetched bearer tokens
-const clientCredentials = {
+export const clientCredentials = {
   'developer.twitter.com':
     'AAAAAAAAAAAAAAAAAAAAACHguwAAAAAAaSlT0G31NDEyg%2BSnBN5JuyKjMCU%3Dlhg0gv0nE7KKyiJNEAojQbn8Y3wJm1xidDK7VnKGBP4ByJwHPb',
   tweetdeck:
